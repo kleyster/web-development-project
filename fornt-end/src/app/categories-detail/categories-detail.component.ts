@@ -27,5 +27,4 @@ export class CategoriesDetailComponent implements OnInit {
   goBack(): void {
     this.location.back();
   }
-
 }

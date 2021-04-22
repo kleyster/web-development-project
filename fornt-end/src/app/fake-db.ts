@@ -18,7 +18,7 @@ export const CATEGORIES: Category[] = [
     },
     {
       id: 5,
-      name:'БЫт'
+      name:'Бытовая техника'
     }
 
 ]
@@ -26,14 +26,62 @@ export const CATEGORIES: Category[] = [
 export const PRODUCTS: Product[] = [
   {
     cat_id: 1,
-    name: 'Smartphone',
+    name: 'Smartphone1',
     uni_id : 1
 
   },
   {
-    cat_id: 2,
-    name: 'Smartphone',
+    cat_id: 1,
+    name: 'Smartphone2',
     uni_id : 2
 
-  }
+  },
+  {
+    cat_id: 2,
+    name: 'Notebook1',
+    uni_id : 3
+
+  },
+  {
+    cat_id: 2,
+    name: 'Notebook2',
+    uni_id : 4
+
+  },
+  {
+    cat_id: 3,
+    name: 'Mouse1',
+    uni_id : 5
+
+  },
+  {
+    cat_id: 3,
+    name: 'Keyboard1',
+    uni_id : 6
+
+  },
+  {
+    cat_id: 4,
+    name: 'TV1',
+    uni_id : 7
+
+  },
+  {
+    cat_id: 4,
+    name: 'Camera1',
+    uni_id : 8
+
+  },
+  {
+    cat_id: 5,
+    name: 'Appliances1',
+    uni_id : 9
+
+  },
+  {
+    cat_id: 5,
+    name: 'Appliances2',
+    uni_id : 10
+
+  },
 ]

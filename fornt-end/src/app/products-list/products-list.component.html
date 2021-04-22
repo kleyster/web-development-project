@@ -1,1 +1,8 @@
 <p>products-list works!</p>
+<a routerLink = "/categories"><button>Go Back</button></a>
+
+<ul>
+    <li *ngFor = "let product of products">
+       <a [routerLink]= "['/categories', cat_id, product.uni_id]">{{product.name}}</a> 
+    </li>
+</ul>
