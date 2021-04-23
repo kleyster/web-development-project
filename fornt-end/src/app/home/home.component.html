@@ -1,1 +1,7 @@
 <p>home works!</p>
+<div>
+    <a [routerLink]="['/categories']"><p class = "cat_but">Categories</p></a>
+    <p>Search <input type = "text" [(ngModel)] = "product_name"></p>
+    <button (click) = "find()">Find</button>
+
+</div>
