@@ -38,9 +38,29 @@
 -->
 
 
-<ul>
+<!-- <ul>
     <li *ngFor = "let product of products">
        <a [routerLink]= "['/categories', cat_id, product.uni_id]">{{product.name}}</a>
     </li>
+</ul> -->
+
+
+<!--
+<div class="list-group">
+  <ul>
+ <li *ngFor = "let product of products">
+  <a href="#" class="list-group-item list-group-item-action active"  [routerLink]= "['/categories', cat_id, product.uni_id]">
+    {{product.name}}
+  </a>
+ </li>
+ </ul>
+</div>  -->
+
+<ul class="list-group list-group-flush">
+  <li class="list-group-item" *ngFor = "let product of products">
+    <a [routerLink]= "['/categories', cat_id, product.uni_id]">{{product.name}}</a>
+  </li>
+
 </ul>
+
 <a routerLink = ""><button>Go Back</button></a>

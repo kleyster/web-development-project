@@ -28,5 +28,7 @@ export class ProductsListComponent implements OnInit {
     //console.log(this.cat_id);
     this.products = PRODUCTS.filter((x) => x.cat_id === this.cat_id);
   }
+  goBackButton() {
 
+  }
 }
