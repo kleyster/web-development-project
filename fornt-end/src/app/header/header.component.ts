@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Category } from '../models';
 import {CATEGORIES} from '../fake-db';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-header',
@@ -9,10 +10,12 @@ import {CATEGORIES} from '../fake-db';
 })
 export class HeaderComponent implements OnInit {
   categories: Category[] =[];
-  constructor() { }
+  cat_id : number = 0;
+  constructor(private router: Router) { }
 
   ngOnInit(): void {
     this.categories = CATEGORIES;
+    this.cat_id = Number(this.router.url.split("/")[this.router.url.split("/").length-1]);
   }
 
 }
