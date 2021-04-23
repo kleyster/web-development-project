@@ -4,6 +4,7 @@ import {CATEGORIES} from '../fake-db';
 import { Router } from '@angular/router';
 
 
+
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
@@ -12,6 +13,7 @@ import { Router } from '@angular/router';
 export class HeaderComponent implements OnInit {
   categories: Category[] =[];
   cat_id : number = 0;
+  
   
   constructor(private router: Router) { }
 

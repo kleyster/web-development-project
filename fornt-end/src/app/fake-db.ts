@@ -14,6 +14,8 @@ export const CATEGORIES: Category[] = [
     }
 ]
 
+export const LOG : boolean[] = []
+
 export const PRODUCTS: Product[] = [
   {
     cat_id: 1,
