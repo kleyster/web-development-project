@@ -11,16 +11,7 @@ export const CATEGORIES: Category[] = [
     {
       id: 2,
       name: 'Всё для геймеров'
-    },
-    {
-      id: 4,
-      name:'ТВ,аудио,видео'
-    },
-    {
-      id: 5,
-      name:'Бытовая техника'
     }
-
 ]
 
 export const PRODUCTS: Product[] = [
