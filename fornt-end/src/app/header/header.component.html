@@ -35,7 +35,7 @@
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
       <div class="dropdown-collapse position-fixed top-10 row">
         <ng-container *ngFor="let product of products" className="row">
-          <a class=" col-12 btn-secondary" (click)="removeSearch()" [routerLink]= "['/categories', cat_id, product.uni_id]" *ngIf=" product.name.includes(text) && text.length ">{{product.name}}</a>
+          <a class=" col-12 btn-secondary" (click)="removeSearch()" [routerLink]= "['/categories', product.cat_id, product.uni_id]" *ngIf=" product.name.includes(text) && text.length ">{{product.name}}</a>
         </ng-container>
       </div>
 
