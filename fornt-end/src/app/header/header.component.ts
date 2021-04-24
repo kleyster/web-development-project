@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
-import { Category } from '../models';
-import {CATEGORIES} from '../fake-db';
+import { Category,Product } from '../models';
+import {CATEGORIES,LOG,PRODUCTS} from '../fake-db';
 import { Router } from '@angular/router';
 
 
@@ -12,16 +12,21 @@ import { Router } from '@angular/router';
 })
 export class HeaderComponent implements OnInit {
   categories: Category[] =[];
+  products : Product[] =[];
   cat_id : number = 0;
-  
+  loggs = LOG;
+  text: string="";
   
   constructor(private router: Router) { }
 
 
   ngOnInit(): void {
     this.categories = CATEGORIES;
+    this.products = PRODUCTS;
 
   }
 
-
+  removeSearch(){
+    this.text="";
+  }
 }

@@ -30,10 +30,16 @@
       </li> -->
     </ul>
 
-    <form class="form-inline my-2 my-lg-0 ">
-      <input class="form-control mr-sm-2" type="search" placeholder="Search" aria-label="Search">
+    <div class="form-inline my-2 my-lg-0 ">
+      <input type="text" [(ngModel)]="text" placeholder="Search" >
       <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Search</button>
-    </form>
+      <div class="dropdown-collapse position-fixed top-10 row">
+        <ng-container *ngFor="let product of products" className="row">
+          <a class=" col-12 btn-secondary" (click)="removeSearch()" [routerLink]= "['/categories', cat_id, product.uni_id]" *ngIf=" product.name.includes(text) && text.length ">{{product.name}}</a>
+        </ng-container>
+      </div>
+
+    </div>
 
   </div>
   <a href="" class="nav-link btn-warning rounded ml-1" [routerLink]="['/login']" >Login </a>

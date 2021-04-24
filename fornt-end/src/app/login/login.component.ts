@@ -26,6 +26,7 @@ export class LoginComponent implements OnInit {
       for (var i = 0; i < 1; i++) {
         if (this.log_m[i] != this.logged) {
           this.log_m.push(this.logged);
+          LOG.push(this.logged);
         }
       }
       console.log(this.log_m[0]); 
