@@ -3,6 +3,7 @@ from django.db import models
 # Create your models here.
 
 class Category(models.Model):
+    id = models.AutoField(primary_key=True)
     name =  models.CharField(max_length=200)
     class Meta:
         verbose_name = "Category"
@@ -19,6 +20,7 @@ class Category(models.Model):
 
 
 class Product(models.Model):
+    id = models.AutoField(primary_key=True)
     name =  models.CharField(max_length=200)
     description =  models.TextField()
     price =  models.FloatField(default=0)
