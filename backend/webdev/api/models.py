@@ -20,11 +20,13 @@ class Category(models.Model):
 
 
 class Product(models.Model):
-    id = models.AutoField(primary_key=True)
-    name =  models.CharField(max_length=200)
-    description =  models.TextField()
-    price =  models.FloatField(default=0)
     category =  models.ForeignKey(Category, on_delete=models.CASCADE, null=True)
+    name =  models.CharField(max_length=200)
+    id = models.AutoField(primary_key=True)
+    description =  models.TextField()
+    url = models.CharField(max_length=500)
+    price =  models.FloatField(default=0)
+    
 
     class Meta:
         verbose_name = "Product"
@@ -33,9 +35,10 @@ class Product(models.Model):
 
     def to_json(self):
         return {
+            'category' : self.category,
             'name' : self.name,
             'price' : self.price,
-            'category' : self.category
+            'image' : self.url,
         }
 
     def __str__(self):

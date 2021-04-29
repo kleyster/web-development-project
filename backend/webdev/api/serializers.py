@@ -3,7 +3,7 @@ from rest_framework import serializers
 from api.models import Category, Product
 
 class CategorySerializer2(serializers.ModelSerializer):
-    name = serializers.CharField()
+    # name = serializers.CharField()
 
     class Meta:
         model = Category
@@ -11,16 +11,16 @@ class CategorySerializer2(serializers.ModelSerializer):
 
 
 class ProductSerializer(serializers.ModelSerializer):
-    category = CategorySerializer2(read_only=True)
+    # category = CategorySerializer2(read_only=True)
 
     class Meta:
         model = Product
-        fields = ('id', 'name', 'description', 'price', 'category')
+        fields = ('category','name', 'id', 'description', 'url','price',)
 
 
 class CategorySerializer(serializers.Serializer):
     id = serializers.IntegerField(read_only=True)
-    name = serializers.CharField()
+    name = serializers.CharField(read_only=True)
 
     def create(self, validated_data):
         category = Category.objects.create(name=validated_data['name'])
@@ -32,8 +32,13 @@ class CategorySerializer(serializers.Serializer):
         return instance
 
 class ProductSerializer(serializers.Serializer):
+    cat_id = serializers.IntegerField(read_only=True)
+    name = serializers.CharField()
     id = serializers.IntegerField(read_only=True)
-    category_id = serializers.IntegerField(read_only=True)
+    description = serializers.CharField()
+    url = serializers.CharField()
+    price = serializers.FloatField()
+    
 
     def create(self, validated_data):
         product = Product.objects.create(name=validated_data['name'])
@@ -43,4 +48,5 @@ class ProductSerializer(serializers.Serializer):
         instance.name = validated_data['name']
         instance.save()
         return instance
+        
 
