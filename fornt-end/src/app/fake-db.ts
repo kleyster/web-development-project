@@ -20,25 +20,25 @@ export const PRODUCTS: Product[] = [
   {
     cat_id: 1,
     name: 'Смартфон Samsung Galaxy A31 64GB Black',
+    url: 'https://www.technodom.kz/media/catalog/product/cache/1366e688ed42c99cd6439df4031862c6/0/d/0d3b4837a905f3f17c1b3386fbdba172145cf7c5_217129_1xxc.jpg',
     uni_id: 1,
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    url: 'https://www.technodom.kz/media/catalog/product/cache/1366e688ed42c99cd6439df4031862c6/0/d/0d3b4837a905f3f17c1b3386fbdba172145cf7c5_217129_1xxc.jpg',
     price: 99990
   },
   {
     cat_id: 1,
     name: 'Смартфон Apple iPhone 11 128GB Black',
+    url: 'https://www.technodom.kz/media/catalog/product/cache/1366e688ed42c99cd6439df4031862c6/3/5/353535e48550691ecf412838d844026d3307ab12_228942_1.jpg',
     uni_id: 2,
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    url: 'https://www.technodom.kz/media/catalog/product/cache/1366e688ed42c99cd6439df4031862c6/3/5/353535e48550691ecf412838d844026d3307ab12_228942_1.jpg',
     price: 369990
   },
   {
     cat_id: 1,
     name: 'Смартфон Apple iPhone 11 128GB Black',
+    url: 'https://www.technodom.kz/media/catalog/product/cache/1366e688ed42c99cd6439df4031862c6/c/2/c234de8ff0123145273a7e39a5a50a12383e7e46_228635_1.jpg',
     uni_id: 3,
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
-    url: 'https://www.technodom.kz/media/catalog/product/cache/1366e688ed42c99cd6439df4031862c6/c/2/c234de8ff0123145273a7e39a5a50a12383e7e46_228635_1.jpg',
     price: 674990
   },
   {
@@ -55,6 +55,7 @@ export const PRODUCTS: Product[] = [
     url: 'https://www.technodom.kz/media/catalog/product/cache/1366e688ed42c99cd6439df4031862c6/a/6/a6ca861d72d0d174fecb6ab6bb18574c3de38a20_226373_1.jpg',
     uni_id: 5,
     description: 'Этот ноутбук не уступает по производительности настольным ПК. Теперь вы сможете где угодно наслаждаться играми, в которые раньше можно было играть только дома.',
+
     price: 574990
   },
   {
