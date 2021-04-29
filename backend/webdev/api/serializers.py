@@ -18,28 +18,29 @@ class ProductSerializer(serializers.ModelSerializer):
         fields = ('id', 'name', 'description', 'price', 'category')
 
 
-# class CategorySerializer(serializers.Serializer):
-#     id = serializers.IntegerField(read_only=True)
-#     name = serializers.CharField()
+class CategorySerializer(serializers.Serializer):
+    id = serializers.IntegerField(read_only=True)
+    name = serializers.CharField()
 
-#     def create(self, validated_data):
-#         category = Category.objects.create(name=validated_data['name'])
-#         return category
+    def create(self, validated_data):
+        category = Category.objects.create(name=validated_data['name'])
+        return category
 
-#     def update(self, instance, validated_data):
-#         instance.name = validated_data['name']
-#         instance.save()
-#         return instance
+    def update(self, instance, validated_data):
+        instance.name = validated_data['name']
+        instance.save()
+        return instance
 
-# class ProductSerializer(serializers.Serializer):
-#     category = serializers.IntegerField(read_only=True)
+class ProductSerializer(serializers.Serializer):
+    id = serializers.IntegerField(read_only=True)
+    category_id = serializers.IntegerField(read_only=True)
 
-#     def create(self, validated_data):
-#         category = Product.objects.create(name=validated_data['name'])
-#         return category
+    def create(self, validated_data):
+        product = Product.objects.create(name=validated_data['name'])
+        return product
 
-#     def update(self, instance, validated_data):
-#         instance.name = validated_data['name']
-#         instance.save()
-#         return instance
+    def update(self, instance, validated_data):
+        instance.name = validated_data['name']
+        instance.save()
+        return instance
 
