@@ -21,13 +21,6 @@
       <li class="nav-item active">
         <a class="nav-link" href="#"><span class="sr-only">(current)</span></a>
       </li>
-      <!-- <li class="nav-item">
-        <a class="nav-link" href="#">Новинки</a>
-      </li>
-
-      <li class="nav-item">
-        <a class="nav-link disabled" href="#">Акции</a>
-      </li> -->
     </ul>
 
     <div class="form-inline my-2 my-lg-0 ">
@@ -42,7 +35,8 @@
     </div>
 
   </div>
-  <a href="" class="nav-link btn-warning rounded ml-1" [routerLink]="['/login']" >Login </a>
+  <a *ngIf="loggs" class="nav-link btn-warning rounded ml-1" (click)="logout()" >Logout</a>
+  <a *ngIf="!loggs" class="nav-link btn-warning rounded ml-1" [routerLink]="['/login']" >Login </a>
 </nav>
 
 

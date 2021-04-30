@@ -1,36 +1,41 @@
 <!-- <ul class="list-group list-group-flush">
-  <li class="list-group-item" *ngFor = "let product of products">
-    <a [routerLink]= "['/categories', cat_id, product.uni_id]">{{product.name}}</a>
-  </li>
-
+    <li class="list-group-item" *ngFor = "let product of products">
+        <a [routerLink]= "['/categories', cat_id, product.uni_id]">{{product.name}}</a>
+    </li>
+    
 </ul>
 
 <a routerLink = ""><button>Go Back</button></a> -->
-
-<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css" rel="stylesheet">
-<div class="container" >
-<div class="row">
-    <div class="col-md-3" *ngFor = "let product of products">
-        <div class="ibox">
-            <div class="ibox-content product-box">
-                <div class="product-imitation">
-                    <img src = "{{product.url}}" width=100%>
-                </div>
-                <div class="product-desc">
-                    <span class="product-price" >
-                        {{product.price | currency:"₸"}}
-                    </span>
-                    <!-- <small class="text-muted">Category</small> -->
-                    <a class="product-name" > <button (click) = "goToProduct(product)">{{product.name}}</button> </a>
-                    <div class="small m-t-xs">
-                        {{product.description}}
-                    </div>
-                    <div class="m-t text-righ">
-                        <a href="#" class="btn btn-xs btn-outline btn-primary" routerLink = "">Back <i class="fa fa-long-arrow-right"></i> </a>
+<ng-container *ngIf="logged" >
+    <div class="container" >
+        <div class="row">
+            <div class="col-md-3" *ngFor = "let product of products">
+                <div class="ibox">
+                    <div class="ibox-content product-box">
+                        <div class="product-imitation">
+                            <img src = "{{product.url}}" width=100%>
+                        </div>
+                        <div class="product-desc">
+                            <span class="product-price" >
+                                {{product.price | currency:"₸"}}
+                            </span>
+                            <!-- <small class="text-muted">Category</small> -->
+                            <a class="product-name" > <button (click) = "goToProduct(product)">{{product.name}}</button> </a>
+                            <div class="small m-t-xs">
+                                {{product.description}}
+                            </div>
+                            <div class="m-t text-righ">
+                                <a href="#" class="btn btn-xs btn-outline btn-primary" routerLink = "">Back <i class="fa fa-long-arrow-right"></i> </a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
-      </div>
-</div>
-</div>
+    </div>
+    
+</ng-container>
+
+<ng-container *ngIf="!logged" >
+    sdfgdml
+</ng-container>

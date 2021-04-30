@@ -12,3 +12,7 @@ export interface Product
   price : number;
 
 }
+
+export interface AuthToken {
+  token : string;
+}
