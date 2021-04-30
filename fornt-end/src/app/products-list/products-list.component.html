@@ -21,7 +21,7 @@
                         {{product.price | currency:"₸"}}
                     </span>
                     <!-- <small class="text-muted">Category</small> -->
-                    <a href="#" class="product-name" [routerLink]= "['/categories', cat_id, product.uni_id]" > {{product.name}} </a>
+                    <a class="product-name" > <button (click) = "goToProduct(product)">{{product.name}}</button> </a>
                     <div class="small m-t-xs">
                         {{product.description}}
                     </div>

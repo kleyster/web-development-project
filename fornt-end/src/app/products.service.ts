@@ -6,7 +6,7 @@ import {HttpClient} from '@angular/common/http';
   providedIn: 'root'
 })
 export class ProductService {
-  BASE_URL = '';
+  BASE_URL = 'http://localhost:8000';
   constructor(private http: HttpClient) { }
   getProducts(id:number): Observable<Product[]>{
     return this.http.get<Product[]>(`${this.BASE_URL}/categories/${id}`);

@@ -1,10 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import {Product} from '../models';
-import {PRODUCTS} from '..//fake-db';
 import { ActivatedRoute, Router } from '@angular/router';
 import { Location } from '@angular/common';
 import { Category } from '../models';
-import {CATEGORIES} from '../fake-db';
+import { ProductService } from '../products.service';
 
 @Component({
   selector: 'app-products-list',
@@ -17,15 +16,27 @@ export class ProductsListComponent implements OnInit {
   categories: Category[] =[];
 
   constructor(private route: ActivatedRoute,
-    private location: Location,private router: Router) { }
+    private location: Location,private router: Router, private productService : ProductService) { }
 
   ngOnInit(): void {
     this.getProducts();
-    this.categories = CATEGORIES;
+    // this.categories = CATEGORIES;
   }
   getProducts() {
     this.cat_id = Number(this.router.url.split("/")[this.router.url.split("/").length-1]);
-    //console.log(this.cat_id);
-    this.products = PRODUCTS.filter((x) => x.cat_id === this.cat_id);
+    // console.log(this.cat_id);
+    // this.products = PRODUCTS.filter((x) => x.cat_id === this.cat_id);
+    this.productService.getProducts(this.cat_id).subscribe((data) =>{
+      this.products = data;
+      
+    })
+  }
+  goToProduct(product:any) {
+    //console.log(product);
+    this.router.navigate(['categories/' + this.cat_id + '/' + product.id]);
   }
 }
+
+
+
+//[routerLink]= "['/categories', cat_id, product.uni_id]"
