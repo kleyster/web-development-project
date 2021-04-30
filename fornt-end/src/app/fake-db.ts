@@ -1,17 +1,18 @@
 import {Category,Product} from './models';
 export const CATEGORIES: Category[] = [
-    {
-      id: 1,
+  {
+    id: 1,
+    name: 'Ноутбуки и компьютеры'
+  },
+  {
+    id:3 ,
+    name: 'Всё для геймеров'
+  },
+  {
+      id: 4,
       name: 'Смартфоны и гаджеты'
     },
-    {
-      id: 3,
-      name: 'Ноутбуки и компьютеры'
-    },
-    {
-      id: 2,
-      name: 'Всё для геймеров'
-    }
+
 ]
 
 export const LOG : boolean[] = []
@@ -49,15 +50,15 @@ export const PRODUCTS: Product[] = [
     description: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit.',
     price: 379990
   },
-  {
-    cat_id: 3,
-    name:  'Игровой ноутбук Lenovo Legion Y540 i7 9750H / 16ГБ / 1000HDD / 128SSD / 15.6 / GTX1660Ti 6 ГБ / DOS / (81SX009QRK)',
-    url: 'https://www.technodom.kz/media/catalog/product/cache/1366e688ed42c99cd6439df4031862c6/a/6/a6ca861d72d0d174fecb6ab6bb18574c3de38a20_226373_1.jpg',
-    uni_id: 5,
-    description: 'Этот ноутбук не уступает по производительности настольным ПК. Теперь вы сможете где угодно наслаждаться играми, в которые раньше можно было играть только дома.',
+  // {
+  //   cat_id: 3,
+  //   name:  'Игровой ноутбук Lenovo Legion Y540 i7 9750H / 16ГБ / 1000HDD / 128SSD / 15.6 / GTX1660Ti 6 ГБ / DOS / (81SX009QRK)',
+  //   url: 'https://www.technodom.kz/media/catalog/product/cache/1366e688ed42c99cd6439df4031862c6/a/6/a6ca861d72d0d174fecb6ab6bb18574c3de38a20_226373_1.jpg',
+  //   uni_id: 5,
+  //   description: 'Этот ноутбук не уступает по производительности настольным ПК. Теперь вы сможете где угодно наслаждаться играми, в которые раньше можно было играть только дома.',
 
-    price: 574990
-  },
+  //   price: 574990
+  // },
   {
     cat_id: 3,
     name: 'Игровой ноутбук Asus TUF Gaming Dash F15 i7 11370H / 16ГБ / 512SSD / RTX3060 6ГБ / 15.6 / DOS / (FX516PM-HN023)',
