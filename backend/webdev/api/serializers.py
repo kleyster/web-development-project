@@ -1,5 +1,4 @@
 from rest_framework import serializers
-
 from api.models import Category, Product
 
 class CategorySerializer2(serializers.ModelSerializer):
@@ -15,7 +14,17 @@ class ProductSerializer2(serializers.ModelSerializer):
 
     class Meta:
         model = Product
-        fields = ('category','name', 'id', 'description', 'url','price',)
+        fields = ('category','name','url', 'id', 'description', 'price',)
+
+
+#  {
+#     cat_id: 3,
+#     name: 'Игровой ноутбук Asus TUF Gaming Dash F15 i7 11370H / 16ГБ / 512SSD / RTX3060 6ГБ / 15.6 / DOS / (FX516PM-HN023)',
+#     url: 'https://www.technodom.kz/media/catalog/product/cache/1366e688ed42c99cd6439df4031862c6/5/8/58c6bcfbf56315752dec74e9f20c7ede29738879_234177_1.jpg',
+#     uni_id : 6,
+#     description: 'Этот ноутбук не уступает по производительности настольным ПК. Теперь вы сможете где угодно наслаждаться играми, в которые раньше можно было играть только дома.',
+#     price: 639990
+# }
 
 
 class CategorySerializer(serializers.Serializer):
@@ -30,6 +39,7 @@ class CategorySerializer(serializers.Serializer):
         instance.name = validated_data['name']
         instance.save()
         return instance
+    
 
 class ProductSerializer(serializers.Serializer):
     cat_id = serializers.IntegerField(read_only=True)
