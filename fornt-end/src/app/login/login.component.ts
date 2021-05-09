@@ -20,7 +20,7 @@ export class LoginComponent implements OnInit {
     ) { }
 
   ngOnInit(): void {
-    
+
   }
   checkLog(){
     if (localStorage.getItem('token')){
@@ -28,6 +28,7 @@ export class LoginComponent implements OnInit {
     }
     return false;
   }
+  
   log(){
     this.categoryService.loginToken(this.login,this.password).subscribe((data)=>{
       console.log(data.token)
@@ -43,6 +44,7 @@ export class LoginComponent implements OnInit {
   getLog(){
     return this.logged;
   }
+
   logout(){
     this.logged=false;
     localStorage.removeItem('token');
